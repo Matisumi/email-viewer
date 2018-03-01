@@ -1,30 +1,21 @@
 class EmailsController < ApplicationController
-	before_action :all_emails, only: [:index, :create, :update, :destroy]
-	before_action :set_emails, only: [:edit, :update, :destroy, :show]
+	before_action :all_emails, only: [:index, :destroy]
+	before_action :set_emails, only: [:update, :destroy, :show]
 	respond_to :html, :js
 
-  def index
-    @emails = Email.all
-
-  end
-
   def show
-		@email = Email.find(params[:id])
-		respond_to :js
     @email.read = true
     @email.save
 	end
 
 
   def update
-    @email = Email.find(params[:id])
     @email.update_attributes!(read: true)
-
   end
 
   def destroy
     @email = Email.destroy(params[:id])
-    redirect_to emails_url    
+    redirect_to root_path   
   end
 
   private 
