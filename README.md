@@ -1,24 +1,5 @@
-# README
+# Mail viewer
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[Heroku app here](https://peaceful-falls-25485.herokuapp.com/)
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+ask me on slack if you need me to re set new mails :)
