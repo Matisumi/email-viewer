@@ -1,0 +1,11 @@
+$(document).ready(function(){
+	$('.emailcontent').hide();
+	$('.read').css({'color' : 'grey', 'background-color': 'whitesmoke'});
+	$('#mail_<%=@email.id%>').slideDown();
+
+	
+	$('#object_<%=@email.id%> a').css({'color' : 'grey', 'font-weight':'normal'});
+	$('#object_<%=@email.id%>').css({'background-color' : 'lightgrey', 'color':'grey'});
+	$('#object_<%=@email.id%>').attr('class','read');
+		
+});

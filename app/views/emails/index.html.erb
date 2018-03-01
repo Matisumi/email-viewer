@@ -1,0 +1,56 @@
+<div class="container">
+	<div class="row">
+		<p>Header</p>
+	</div>
+	<div class="row">
+		<div class="col-lg-offset-2 col-lg-2">
+			
+			<table class="table table-striped">
+				<tr>
+
+					<th>Email object</th>
+
+				</tr>
+
+				<% @emails.each do |email| %> 
+
+					<tr>
+						<% if email.read == true %> 
+						<td id="object_<%= email.id %>" class="read" ><%= link_to email.object, email_path(email), remote: true %></td>
+						<% else %>
+						<td id="object_<%= email.id %>" class="ur" ><%= link_to email.object, email_path(email), remote: true %></td>
+						<% end %>
+     
+					</tr>
+				<% end %>
+			</table>
+
+		</div>
+
+		<div class="col-lg-6">
+			<table class="table table-striped">
+				<tr>
+
+					<th>content</th>
+
+				</tr>
+			</table>
+
+			<% @emails.each do |email| %> 
+
+					<div id="mail_<%= email.id %>" class="emailcontent" style="display: none;" >
+						<div class="row">
+							<h1><%= email.object %></h1>
+							<p><%= email.body %></p>
+						
+							<%= link_to email, remote: true, method: :delete, class: 'delete_email' , data: { confirm: 'Are you sure?' } do %>
+  							<button>Delete!</button>
+							<% end %>
+
+						</div>
+					</div>
+				<% end %>
+			
+		</div>
+	</div>
+</div>
