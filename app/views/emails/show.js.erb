@@ -1,11 +1,11 @@
 $(document).ready(function(){
-	$('.emailcontent').hide();
-	$('.read').css({'color' : 'grey', 'background-color': 'whitesmoke'});
-	$('#mail_<%=@email.id%>').slideDown();
+	$('.emailcontent').hide(); //hiding (reset) all the mail divs
+	$('.read').css({'color' : 'grey', 'background-color': 'whitesmoke'}); //set all read tabs at the same background /text color
+	$('#mail_<%=@email.id%>').slideDown(); //display animation
 
 	
-	$('#object_<%=@email.id%> a').css({'color' : 'grey', 'font-weight':'normal'});
-	$('#object_<%=@email.id%>').css({'background-color' : 'lightgrey', 'color':'grey'});
-	$('#object_<%=@email.id%>').attr('class','read');
+	$('#object_<%=@email.id%> a').css({'color' : 'grey', 'font-weight':'normal'}); //set the selected link on not bold and grey for "read status"
+	$('#object_<%=@email.id%>').css({'background-color' : 'lightgrey', 'color':'grey'}); // set the selected link tab background color
+	$('#object_<%=@email.id%>').attr('class','read'); // gives the tab the class "read"
 		
 });
