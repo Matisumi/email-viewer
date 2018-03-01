@@ -39,7 +39,7 @@
 			<% @emails.each do |email| %> 
 
 					<div id="mail_<%= email.id %>" class="emailcontent" style="display: none;" >
-						<div class="row">
+						<div class="row" id="box">
 							<h1><%= email.object %></h1>
 							<p><%= email.body %></p>
 						
